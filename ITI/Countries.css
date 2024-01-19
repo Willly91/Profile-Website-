@@ -1,0 +1,154 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8e9c8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#frame {
+    margin: 0 auto;
+    width: 1200px;
+    max-width: 50%;
+    text-align: center;
+}
+
+#slides {
+    background: rgb(234, 217, 217);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#overflow {
+    width: 100%;
+    overflow: hidden;
+}
+
+#frame input[type=radio] {
+    display: none;
+}
+
+#frame label {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#slides .inner {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 300%;
+    line-height: 0;
+    height: 200px;
+}
+
+.frame-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #388cba;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.frame-content img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.frame-content p {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.frame {
+    width: 33.33%;
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#frame1:checked~#slides .inner {
+    margin-left: 0;
+}
+
+#frame2:checked~#slides .inner {
+    margin-left: -100%;
+}
+
+#frame3:checked~#slides .inner {
+    margin-left: -200%;
+}
+
+#controls {
+    margin: -280px 0 0 0;
+    width: 100%;
+    height: 80px;
+    z-index: 3;
+    position: relative;
+}
+
+#controls label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 80px;
+    height: 80px;
+    opacity: .4;
+}
+
+#controls label:hover {
+    opacity: 1;
+}
+
+#frame1:checked~#controls label:nth-child(2),
+#frame2:checked~#controls label:nth-child(3),
+#frame3:checked~#controls label:nth-child(1) {
+    background: url(../ITI/resurce/R.png) no-repeat;
+    float: right;
+    margin: 0 -80px 0 0;
+    display: block;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+#frame1:checked~#controls label:nth-last-child(2),
+#frame2:checked~#controls label:nth-last-child(3),
+#frame3:checked~#controls label:nth-last-child(1) {
+    background: url(../ITI/resurce/L.png) no-repeat;
+    float: left;
+    margin: 0 0 0 -80px;
+    display: block;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+#bullets {
+    margin: 200px 0 0;
+    text-align: center;
+}
+
+#bullets label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #ccc;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+#frame1:checked~#bullets label:nth-child(1),
+#frame2:checked~#bullets label:nth-child(2),
+#frame3:checked~#bullets label:nth-child(3) {
+    background: #444;
+}

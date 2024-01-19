@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Contact Me</h2>
+            <p>Swing by for a cup of coffee, or leave us a message</p>
+        </div>
+
+        <div class="map-section">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.014125658981!2d-122.08475238464787!3d37.422408079801544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580e29a939651%3A0x4f7fb06e8a2f9fa1!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1609343962982!5m2!1sen!2sus"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <br>
+        <div class="social-icons">
+            <a class="social-icon" href="https://www.facebook.com" target="_blank">
+                <img src="../../Web/HTML&CSS/Day 1/Lab/Resources/Facebook-icon.png" alt="Facebook">
+            </a>
+            <a class="social-icon" href="https://twitter.com/x" target="_blank">
+                <img src="../../Web/HTML&CSS/Day 1/Lab/Resources/twitter.png" alt="Twitter">
+            </a>
+            <a class="social-icon" href="https://mail.google.com" target="_blank">
+                <img src="../../Web/HTML&CSS/Day 1/Lab/Resources/google+.png" alt="Gmail">
+            </a>
+            <a class="social-icon" href="https://www.linkedin.com/in/mohamed-waleed-ahmed-kamel-3a7882190/"
+                target="_blank">
+                <img src="../../Web/HTML&CSS/Day 1/Lab/Resources/linkedin.png" alt="LinkedIn">
+            </a>
+        </div>
+        <br>
+        <div class="contact-form">
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="firstname">First Name:</label>
+                    <input type="text" id="firstname" name="firstname" required placeholder="Your First Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" id="lastname" name="lastname" required placeholder="Your Last Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <select id="country" name="country" required>
+                        <option value="usa">USA</option>
+                        <option value="canada">Canada</option>
+                        <option value="uk">UK</option>
+                        <option value="egy">Egypt</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <textarea id="subject" name="subject" rows="4" required placeholder="Write Something.."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
